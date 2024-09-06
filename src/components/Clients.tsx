@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import acmeImg from "@/public/images/acme.png";
 import quantamImg from "@/public/images/quantum.png";
@@ -18,8 +20,17 @@ export default function CompaniesList() {
           Trusted by world's most innovative teams
         </h2>
 
-        <div className="relative mt-9 overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-5 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] before:content-[''] after:absolute after:right-0 after:top-0 after:h-full after:w-5 after:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))] after:content-['']">
-          <div className="flex gap-16">
+        <div className="relative mt-9 flex overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-5 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] before:content-[''] after:absolute after:right-0 after:top-0 after:h-full after:w-5 after:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))] after:content-['']">
+          <motion.div
+            className="flex flex-none gap-16 pr-16"
+            initial={{ translateX: 0 }}
+            animate={{ translateX: "-50%" }}
+            transition={{
+              duration: 10,
+              ease: "linear",
+              repeat: Infinity,
+            }}
+          >
             {images.map((imgSrc, i) => (
               <React.Fragment key={i}>
                 <Image
@@ -29,7 +40,17 @@ export default function CompaniesList() {
                 />
               </React.Fragment>
             ))}
-          </div>
+
+            {images.map((imgSrc, i) => (
+              <React.Fragment key={i}>
+                <Image
+                  src={imgSrc}
+                  alt="client-image"
+                  className="h-8 w-auto flex-none"
+                />
+              </React.Fragment>
+            ))}
+          </motion.div>
         </div>
       </div>
     </div>
