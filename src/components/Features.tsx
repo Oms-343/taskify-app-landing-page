@@ -28,8 +28,6 @@ function Feature({
   title: string;
   description: string;
 }) {
-  const [open, setOpen] = React.useState(false);
-
   const offsetX = useMotionValue(-100);
   const offsetY = useMotionValue(-100);
   const maskImage = useMotionTemplate`radial-gradient(100px 100px at ${offsetX}px ${offsetY}px,black,transparent)`;
