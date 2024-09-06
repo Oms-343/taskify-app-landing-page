@@ -1,4 +1,4 @@
-Live link [page]()
+Live link [page](https://taskify-app-landing-page.vercel.app)
 
 Figma [design](https://www.figma.com/design/MvnBKajcDg5Y0exbaRXEhE/Taskify-app-landing-page?node-id=27-187&t=rK6Nq3PolezxwuRs-1)
 
