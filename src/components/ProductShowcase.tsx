@@ -13,7 +13,11 @@ export default function ProductShowcase() {
           progress, motivate your efforts, and celebrate your successes, one
           task at a time.
         </p>
-        <Image src={appScreen} alt="product-dashboard" className="mt-14" />
+        <Image
+          src={appScreen}
+          alt="product-dashboard"
+          className="mx-auto mt-14 w-full"
+        />
       </div>
     </section>
   );
