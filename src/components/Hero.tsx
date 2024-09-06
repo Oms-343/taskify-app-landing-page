@@ -23,7 +23,7 @@ export default function Hero() {
 
         <div className="mt-8 flex justify-center">
           <div className="relative inline-flex">
-            <h1 className="mx-auto inline-flex text-center text-7xl font-bold tracking-tighter md:text-9xl">
+            <h1 className="mx-auto inline-flex text-center text-6xl font-bold tracking-tighter md:text-9xl">
               One Task
               <br />
               at a Time
@@ -58,23 +58,3 @@ export default function Hero() {
     </section>
   );
 }
-/* H1 */
-
-// width: 595px;
-// height: 250px;
-
-// font-family: 'DM Sans';
-// font-style: normal;
-// font-weight: 700;
-// font-size: 165px;
-// line-height: 125px;
-// /* or 76% */
-// text-align: center;
-// letter-spacing: -0.075em;
-
-// color: #FFFFFF;
-
-// /* Inside auto layout */
-// flex: none;
-// order: 1;
-// flex-grow: 0;
