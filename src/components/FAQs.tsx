@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
-import clsx from "clsx";
+import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import PlusIcon from "@/public/icons/plus.svg";
 import MinusIcon from "@/public/icons/minus.svg";
@@ -53,7 +54,29 @@ function AccordianItem({
           <PlusIcon className="cursor-pointer" />
         )}
       </p>
-      <p className={clsx(isOpen ? "block" : "hidden", "mt-4")}>{answer}</p>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.p
+            initial={{
+              opacity: 0,
+              height: 0,
+              marginTop: 0,
+            }}
+            animate={{
+              opacity: 1,
+              height: "auto",
+              marginTop: "16px",
+            }}
+            exit={{
+              opacity: 0,
+              height: 0,
+              marginTop: 0,
+            }}
+          >
+            {answer}
+          </motion.p>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
