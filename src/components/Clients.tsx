@@ -17,7 +17,7 @@ export default function CompaniesList() {
     <div className="bg-black py-[72px] text-white">
       <div className="container">
         <h2 className="text-center text-xl text-white/70">
-          Trusted by world's most innovative teams
+          Trusted by {`world's`} most innovative teams
         </h2>
 
         <div className="relative mt-9 flex overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-5 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] before:content-[''] after:absolute after:right-0 after:top-0 after:h-full after:w-5 after:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))] after:content-['']">

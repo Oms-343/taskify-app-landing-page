@@ -1,6 +1,6 @@
 "use client";
 import EcosystemIcon from "@/public/icons/ecosystem.svg";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 const features = [
@@ -28,6 +28,8 @@ function Feature({
   title: string;
   description: string;
 }) {
+  const [open, setOpen] = React.useState(false);
+
   const offsetX = useMotionValue(-100);
   const offsetY = useMotionValue(-100);
   const maskImage = useMotionTemplate`radial-gradient(100px 100px at ${offsetX}px ${offsetY}px,black,transparent)`;
@@ -45,7 +47,7 @@ function Feature({
     return () => {
       window.removeEventListener("mousemove", updateMousePosition);
     };
-  }, []);
+  }, [offsetX, offsetY]);
 
   return (
     <div className="relative rounded-xl border border-white/30 px-5 py-10 text-center">

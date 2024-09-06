@@ -2,7 +2,6 @@ import InstaIcon from "@/public/icons/insta.svg";
 import XIcon from "@/public/icons/x-social.svg";
 import TikTokIcon from "@/public/icons/tiktok.svg";
 import YoutubeIcon from "@/public/icons/youtube.svg";
-import { TIMEOUT } from "dns";
 
 export default function Footer() {
   return (
