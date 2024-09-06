@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import ArrowRight from "@/public/icons/arrow-w.svg";
 import cursorImage from "@/public/images/cursor.png";
@@ -28,20 +30,35 @@ export default function Hero() {
               <br />
               at a Time
             </h1>
-            <Image
-              src={cursorImage}
-              alt="cursor-image"
-              height={200}
-              width={200}
+            <motion.div
               className="absolute right-[476px] top-[108px] hidden md:inline"
-            />
-            <Image
-              src={messageImage}
-              alt="message-image"
-              height={200}
-              width={200}
+              drag
+              dragSnapToOrigin
+            >
+              <Image
+                src={cursorImage}
+                alt="cursor-image"
+                height={200}
+                width={200}
+                className="max-w-none"
+                draggable="false" // to undo ghost  default drag
+              />
+            </motion.div>
+
+            <motion.div
               className="absolute left-[498px] top-[56px] hidden md:inline"
-            />
+              drag
+              dragSnapToOrigin
+            >
+              <Image
+                src={messageImage}
+                alt="message-image"
+                height={200}
+                width={200}
+                className="max-w-none"
+                draggable="false"
+              />
+            </motion.div>
           </div>
         </div>
         <p className="mx-auto mt-8 max-w-[456px] text-center text-xl">
